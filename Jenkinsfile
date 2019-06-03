@@ -8,7 +8,7 @@ pipeline {
         }
         stage('deploy'){
             steps{               
-                sh "docker ps"
+                sh 'echo "hello"'
             }            
         }
     }
