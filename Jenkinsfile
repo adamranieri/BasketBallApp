@@ -12,8 +12,7 @@ pipeline {
             agent { docker 'tomcat:latest' } 
             steps{ 
                 sh "pwd"
-                sh "./deploy.sh"
-                sh "pwd"
+
             }            
         }
     }
