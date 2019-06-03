@@ -8,7 +8,7 @@ pipeline {
         }
         stage('deploy'){
             steps{               
-                sh "cp -rf ./target/BBallApp.war ../../"
+                sh "pwd"
             }            
         }
     }
