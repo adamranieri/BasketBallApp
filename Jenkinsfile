@@ -7,8 +7,9 @@ pipeline {
             }
         }
         stage('deploy'){
+            agent { docker { image 'tomcat:latest' } }
             steps{               
-                sh 'echo "hello"'
+                sh 'catalina --version'
             }            
         }
     }
