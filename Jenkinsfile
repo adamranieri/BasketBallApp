@@ -6,8 +6,8 @@ pipeline {
                 sh "mvn package"                           
             }
         }
-        stage('deploy'){
-            agent { docker { image 'tomcat:latest' } }
+        agent { docker { image 'tomcat:latest' } }
+        stage('deploy'){         
             steps{               
                 sh 'catalina --version'
             }            
