@@ -10,7 +10,7 @@ pipeline {
         stage('deploy'){
             agent { docker  'tomcat:latest'  }
             steps{               
-                sh 'catalina --version'
+                sh ' ./${CATALINA_HOME}/bin/version.sh'
             }            
         }
     }
