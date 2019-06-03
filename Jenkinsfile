@@ -10,7 +10,8 @@ pipeline {
         } 
         stage('deploy'){
             agent { docker 'tomcat:latest' } 
-            steps{               
+            steps{ 
+                sh "cd /var/lib"
                 sh "pwd"
             }            
         }
