@@ -8,7 +8,7 @@ pipeline {
         }
         stage('deploy'){
             steps{               
-                sh "sudo cp ./target/BBallApp.war /var/lib/docker/volumes/webapps/_data/BBallApp.war"
+                sh "./deploy.sh"
             }            
         }
     }
