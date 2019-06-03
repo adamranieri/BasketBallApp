@@ -4,13 +4,14 @@ pipeline {
         stage('build') {
             agent { docker 'maven:3-alpine' } 
             steps {
+                sh "pwd"
                 sh "mvn package"                           
             }
         } 
         stage('deploy'){
             agent { docker  'tomcat:latest'  }
             steps{               
-                sh ' ./${CATALINA_HOME}/bin/version.sh'
+                sh "pwd"
             }            
         }
     }
