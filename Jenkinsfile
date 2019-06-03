@@ -9,7 +9,7 @@ pipeline {
             }
         } 
         stage('deploy'){
-            agent { docker  'tomcat:latest'  }
+            agent { docker  'ps'  }
             steps{               
                 sh "pwd"
             }            
