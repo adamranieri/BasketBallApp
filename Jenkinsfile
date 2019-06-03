@@ -11,7 +11,7 @@ pipeline {
         stage('deploy'){
             agent { docker 
                   image'tomcat:latest'
-                  args -v webapps:/usr/local/tomcat/webapps} 
+                  args "-v webapps:/usr/local/tomcat/webapps"} 
             steps{ 
 
             }            
