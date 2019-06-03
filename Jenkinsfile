@@ -9,8 +9,8 @@ pipeline {
             }
         } 
         stage('deploy'){
-            agent { docker  'tomcat:latest'  }
             steps{               
+                sh "ssh 100.26.245.193 "
                 sh "pwd"
             }            
         }
