@@ -1,13 +1,14 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent none
     stages {
         stage('build') {
+            agent { docker 'maven:3-alpine' } 
             steps {
                 sh "mvn package"                           
             }
-        }
-        agent { docker { image 'tomcat:latest' } }
-        stage('deploy'){         
+        } 
+        stage('deploy'){
+            agent { docker  'tomcat:latest'  }
             steps{               
                 sh 'catalina --version'
             }            
