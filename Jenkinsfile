@@ -1,5 +1,4 @@
 pipeline {
-    agent none
     stages {
         stage('build') {
             agent { docker 'maven:3-alpine' } 
@@ -9,6 +8,7 @@ pipeline {
             }
         } 
         stage('deploy'){
+            agent { docker 'tomcat:latest' } 
             steps{               
                 sh "pwd"
             }            
