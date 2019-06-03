@@ -8,7 +8,7 @@ pipeline {
         }
         stage('deploy'){
             steps{               
-                sh 'docker run -it -d -p 80:8080 -v $(pwd)/target/*.war:/usr/local/tomcat/webapps/bball.war tomcat'
+                sh 'cp /target/*.war /var/lib/docker/volumes/webapps/_data'
             }            
         }
     }
