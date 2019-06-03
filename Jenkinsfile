@@ -8,7 +8,7 @@ pipeline {
         }
         stage('deploy'){
             steps{               
-                sh "yes | cp -rf ./target/BBallApp.war ../../"
+                sh "cp -rf ./target/BBallApp.war ../../"
             }            
         }
     }
