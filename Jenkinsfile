@@ -8,7 +8,7 @@ pipeline {
         }
         stage('deploy'){
             steps{               
-                sh 'cp ./target/*.war /var/lib/docker/volumes/webapps/_data'
+                sh 'cp ./target/BBallApp.war /var/lib/docker/volumes/webapps/_data'
             }            
         }
     }
