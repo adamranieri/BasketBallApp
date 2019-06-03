@@ -9,9 +9,10 @@ pipeline {
             }
         } 
         stage('deploy'){
-            agent { docker 'tomcat:latest' } 
+            agent { docker 
+                  image'tomcat:latest'
+                  args -v webapps:/usr/local/tomcat/webapps} 
             steps{ 
-                sh "pwd"
 
             }            
         }
