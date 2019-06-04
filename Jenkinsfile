@@ -8,8 +8,8 @@ pipeline {
         } 
         stage('deploy'){
             steps{ 
-                sh "pwd"
-                sh "cp -f ./target/*.war/ home/ec2-user/RevOpsMaven/apache-tomcat-9.0.20/webapps"  
+                sh "cd ./target"
+                sh "cp -f *.war /home/ec2-user/RevOpsMaven/apache-tomcat-9.0.20/webapps"  
             }            
         }
     }
