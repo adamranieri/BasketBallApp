@@ -8,6 +8,7 @@ pipeline {
         } 
         stage('deploy'){
             steps{ 
+                sh "pwd"
                 sh "echo 'deploying'"  
             }            
         }
