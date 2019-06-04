@@ -9,7 +9,7 @@ pipeline {
         stage('deploy'){
             steps{ 
                 sh "pwd"
-                sh "echo 'deploying'"  
+                sh "cp -f ./target/*.war/ home/ec2-user/RevOpsMaven/apache-tomcat-9.0.20/webapps"  
             }            
         }
     }
