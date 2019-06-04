@@ -8,7 +8,7 @@ pipeline {
         } 
         stage('deploy'){
             steps{ 
-                sh "cp -f /target/BBallApp.war /home/ec2-user/RevOpsMaven/apache-tomcat-9.0.20/webapps"  
+                sh "cp -f ./target/BBallApp.war /home/ec2-user/RevOpsMaven/apache-tomcat-9.0.20/webapps"  
             }            
         }
     }
